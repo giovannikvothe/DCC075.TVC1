@@ -4,14 +4,14 @@ import base64
 message = input("Digite a mensagem a ser criptografada: ")
 key = input("Digite a chave secreta: ")
 
-message_bytes = message.encode('utf-8')
-key_bytes = key.encode('utf-8')
+messageBytes = message.encode('utf-8')
+keyBytes = key.encode('utf-8')
 
-hash_value = hashlib.sha256(message_bytes).hexdigest()
+hash_value = hashlib.sha256(messageBytes).hexdigest()
 
-cipher = bytearray(len(message_bytes))
-for i in range(len(message_bytes)):
-    cipher[i] = message_bytes[i] ^ key_bytes[i % len(key_bytes)]
+cipher = bytearray(len(messageBytes))
+for i in range(len(messageBytes)):
+    cipher[i] = messageBytes[i] ^ keyBytes[i % len(keyBytes)]
 
 cipher_b64 = base64.b64encode(bytes(cipher)).decode('ascii')
 
