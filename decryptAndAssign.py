@@ -1,3 +1,7 @@
+# Alunos:
+#     Giovanni Almeida Dutra - 202465035AC
+#     Guilherme Roldão dos Reis Pimenta - 202435001
+
 import hashlib
 import base64
 
